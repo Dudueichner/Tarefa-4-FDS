@@ -23,30 +23,29 @@ public class ContaCorrenteTest{
 
     @Test 
     void TrocaCategoriaSilverParaGold(){
-        conta.deposito(50000);
+        conta.deposito(60000);
         Assertions.assertEquals("Gold", conta.getCategoria());
     }
 
     @Test 
     void TrocaCategoriaGoldParaPlatinum(){
-        conta.deposito(50000);
+        conta.deposito(60000);
         conta.deposito(150000);
         Assertions.assertEquals("Platinum", conta.getCategoria());
     }
 
     @Test 
     void TrocaCategoriaPlatinumParaGold(){
-        conta.deposito(50000);
+        conta.deposito(60000);
         conta.deposito(150000);
-        conta.retirada(102000);
+        conta.retirada(120000);
         Assertions.assertEquals("Gold", conta.getCategoria());
     }
 
     @Test 
     void TrocaCategoriaGoldParaSilver(){
-        conta.deposito(50000);
-        conta.retirada(26000);
+        conta.deposito(60000);
+        conta.retirada(40000);
         Assertions.assertEquals("Silver", conta.getCategoria());
     }
-
 }
