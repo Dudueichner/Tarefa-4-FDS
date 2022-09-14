@@ -8,7 +8,7 @@ public class ContaCorrenteTest{
 
     @BeforeEach
     void setup(){
-        conta = new ContaCorrente();
+        conta = new ContaCorrente("numeroTeste","nomeTeste");
     }
 
     @Test
